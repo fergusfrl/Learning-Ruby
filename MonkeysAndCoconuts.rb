@@ -18,7 +18,7 @@ def checkRecursion(n, men)
     return false 
   end
   
-  n = n - ((n-1)/(men*1.0))
+  n = n - ((n-1)/(men*1.0)) - 1
   puts n
   checkRecursion(n, men-1)
 end
@@ -30,7 +30,7 @@ def main(men = 5)
     found = checkRecursion(i, men)
     i = i+1
   end
-  puts "First Result = #{i}"
+  puts "First Result = #{i-1}"
 end
 
 main()
