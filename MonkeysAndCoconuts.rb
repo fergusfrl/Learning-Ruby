@@ -8,7 +8,9 @@
 #   - The man then hides 1 pile and puts remaining piles together to reform the large pile
 #The next day, the pile divides perfectly between all men
 
-#Question: What is the minimum number of coconuts the men could start with?
+#Link to problem: https://www.youtube.com/watch?v=U9qU20VmvaU
+
+#Question: What is the minimum number of coconuts n men could start with?
 
 def splitPile(n, men)
   if men == 0 && n%@men == 0
@@ -29,7 +31,7 @@ def main(men)
     found = splitPile(i, men)
     i = i + 1
   end
-  puts "Starting Coconuts: #{i-1}"
+  puts "Starting Coconuts for #{@men} men: #{i-1}"
 end
 
 main(5)
