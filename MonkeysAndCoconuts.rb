@@ -25,12 +25,10 @@ def main(men = 5)
   i = 0
   found = false
   while !found do
-    check(i, men)
+    found = check(i, men)
     i = i + 1
   end
-  puts "Success! #{i-1}"
+  puts "Starting number of coconuts = #{i-1}"
 end
 
 main(5)
-
-#Answer for 5 men = 3121
