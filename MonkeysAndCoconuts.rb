@@ -10,27 +10,27 @@
 
 #Question: What is the minimum number of coconuts the men could start with?
 
-def checkRecursion(n, men)
-  if men == 1
+def check(n, men)
+  if men == 0
     return true
   end
-  if (n-1)%men != 0
-    return false 
+  n = n - (n-1)/5.0 - 1
+  if n % 1 != 0
+    return false
   end
-  
-  n = n - ((n-1)/(men*1.0)) - 1
-  puts n
-  checkRecursion(n, men-1)
+  check(n, men-1)
 end
 
 def main(men = 5)
   i = 0
   found = false
   while !found do
-    found = checkRecursion(i, men)
-    i = i+1
+    check(i, men)
+    i = i + 1
   end
-  puts "First Result = #{i-1}"
+  puts "Success! #{i-1}"
 end
 
-main()
+main(5)
+
+#Answer for 5 men = 3121
