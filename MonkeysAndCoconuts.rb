@@ -24,12 +24,16 @@ def splitPile(n, men)
 end
 
 def main(men)
+  if men <= 0
+    puts "Starting number of men must be more than 0"
+    return
+  end
   if men == 1
     puts "Starting Coconuts for 1 man: 2"
     return
   end
   @men = men
-  i = 0
+  i = 2
   found = false
   while !found do
     found = splitPile(i, men)
