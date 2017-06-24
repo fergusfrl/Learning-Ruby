@@ -10,7 +10,7 @@
 
 #Question: What is the minimum number of coconuts the men could start with?
 
-def check(n, men)
+def splitPile(n, men)
   if men == 0 && n%@men == 0
     return true
   end
@@ -18,7 +18,7 @@ def check(n, men)
   if n % 1 != 0
     return false
   end
-  check(n, men-1)
+  splitPile(n, men-1)
 end
 
 def main(men)
@@ -26,7 +26,7 @@ def main(men)
   i = 0
   found = false
   while !found do
-    found = check(i, men)
+    found = splitPile(i, men)
     i = i + 1
   end
   puts "Starting Coconuts: #{i-1}"
