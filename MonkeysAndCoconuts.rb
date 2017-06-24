@@ -11,24 +11,25 @@
 #Question: What is the minimum number of coconuts the men could start with?
 
 def check(n, men)
-  if men == 0
+  if men == 0 && n%@men == 0
     return true
   end
-  n = n - (n-1)/5.0 - 1
+  n = n - (n-1)/(@men * 1.0) - 1
   if n % 1 != 0
     return false
   end
   check(n, men-1)
 end
 
-def main(men = 5)
+def main(men)
+  @men = men
   i = 0
   found = false
   while !found do
     found = check(i, men)
     i = i + 1
   end
-  puts "Starting number of coconuts = #{i-1}"
+  puts "Starting Coconuts: #{i-1}"
 end
 
 main(5)
