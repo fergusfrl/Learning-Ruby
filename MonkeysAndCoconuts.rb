@@ -24,6 +24,10 @@ def splitPile(n, men)
 end
 
 def main(men)
+  if men == 1
+    puts "Starting Coconuts for 1 man: 2"
+    return
+  end
   @men = men
   i = 0
   found = false
@@ -34,4 +38,4 @@ def main(men)
   puts "Starting Coconuts for #{@men} men: #{i-1}"
 end
 
-main(5)
+main(5) #Main variable is number of men
