@@ -13,7 +13,7 @@
 #Question: What is the minimum number of coconuts n men could start with?
 
 def splitPile(n, men)
-  if men == 0 && n%@men == 0
+  if men == 0 && n%@men == 0 && n > 0
     return true
   end
   n = n - (n-1)/(@men * 1.0) - 1
